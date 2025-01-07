@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автомобили</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/scripts/CarsCRUD.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="navbar-menu">
+            <li><a href="/cars.html">Автомобили</a></li>
+            <li><a href="/clients.html">Клиенты</a></li>
+            <li><a href="/parkingSpaces.html">Парковочные места</a></li>
+        </ul>
+    </nav>
+
+    <h1>Список автомобилей</h1>
+    <button onclick="showCreateForm()">Добавить автомобиль</button>
+    <div id="carForm" style="display: none;">
+        <h2 id="formTitle">Добавить автомобиль</h2>
+        <form id="carFormFields">
+            <input type="hidden" id="carId" />
+            <label for="carBrand">Марка:</label>
+            <input type="text" id="carBrand" required />
+            <label for="carNumber">Номер:</label>
+            <input type="text" id="carNumber" required />
+            <label for="clientId">Клиент:</label>
+            <select id="clientId" required></select>
+            <button type="submit">Сохранить</button>
+            <button type="button" onclick="hideForm()">Отмена</button>
+        </form>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Марка</th>
+                <th>Номер</th>
+                <th>Клиент</th>
+                <th>Действия</th>
+            </tr>
+        </thead>
+        <tbody id="carsTableBody"></tbody>
+    </table>
+
+    <script>
+        let clients = [];
+
+        async function loadClients() {
+            try {
+                const response = await fetch('/api/Clients');
+                if (!response.ok) throw new Error('Ошибка загрузки клиентов');
+                clients = await response.json();
+                populateClientDropdown();
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        function populateClientDropdown() {
+            const clientDropdown = document.getElementById('clientId');
+            clientDropdown.innerHTML = '<option value="">Выберите клиента</option>';
+            clients.forEach(client => {
+                const option = document.createElement('option');
+                option.value = client.id;
+                option.textContent = `${client.surname} ${client.name} ${client.middleName}`;
+                clientDropdown.appendChild(option);
+            });
+        }
+
+        document.getElementById('carFormFields').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const id = document.getElementById('carId').value;
+            const car = {
+                brand: document.getElementById('carBrand').value,
+                number: document.getElementById('carNumber').value,
+                clientId: parseInt(document.getElementById('clientId').value, 10)
+            };
+
+            if (id) {
+                car.id = id;
+                await updateCar(car);
+            } else {
+                await createCar(car);
+            }
+
+            hideForm();
+        });
+
+        function showCreateForm() {
+            document.getElementById('carForm').style.display = 'block';
+            document.getElementById('formTitle').innerText = 'Добавить автомобиль';
+        }
+
+        function showUpdateForm(id) {
+            const car = cars.find(c => c.id === id);
+            if (!car) return;
+            document.getElementById('carForm').style.display = 'block';
+            document.getElementById('formTitle').innerText = 'Редактировать автомобиль';
+            document.getElementById('carId').value = car.id;
+            document.getElementById('carBrand').value = car.brand;
+            document.getElementById('carNumber').value = car.number;
+            document.getElementById('clientId').value = car.clientId;
+        }
+
+        function hideForm() {
+            document.getElementById('carForm').style.display = 'none';
+            document.getElementById('carFormFields').reset();
+        }
+
+        document.addEventListener('DOMContentLoaded', async function () {
+            await loadClients();
+            getCars();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Клиенты</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/scripts/ClientsCRUD.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="navbar-menu">
+            <li><a href="/cars.html">Автомобили</a></li>
+            <li><a href="/clients.html">Клиенты</a></li>
+            <li><a href="/parkingSpaces.html">Парковочные места</a></li>
+        </ul>
+    </nav>
+
+    <h1>Список клиентов</h1>
+    <button onclick="showCreateForm()">Добавить клиента</button>
+    <div id="clientForm" style="display: none;">
+        <h2 id="formTitle">Добавить клиента</h2>
+        <form id="clientFormFields">
+            <input type="hidden" id="clientId" />
+            <label for="clientName">Имя:</label>
+            <input type="text" id="clientName" required />
+            <label for="clientMiddleName">Отчество:</label>
+            <input type="text" id="clientMiddleName" required />
+            <label for="clientSurname">Фамилия:</label>
+            <input type="text" id="clientSurname" required />
+            <label for="clientTelephone">Телефон:</label>
+            <input type="text" id="clientTelephone" required />
+            <label for="isRegularClient">Является ли постоянным клиентом:</label>
+            <input type="checkbox" id="isRegularClient" value="true"/>
+            <button type="submit">Сохранить</button>
+            <button type="button" onclick="hideForm()">Отмена</button>
+        </form>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Имя</th>
+                <th>Отчество</th>
+                <th>Фамилия</th>
+                <th>Телефон</th>
+                <th>Является ли постоянным клиентом</th>
+                <th>Действия</th>
+            </tr>
+        </thead>
+        <tbody id="clientsTableBody"></tbody>
+    </table>
+
+    <script>
+
+        document.getElementById('clientFormFields').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const id = document.getElementById('clientId').value;
+            const client = {
+                name: document.getElementById('clientName').value,
+                middleName: document.getElementById('clientMiddleName').value,
+                surname: document.getElementById('clientSurname').value,
+                telephone: document.getElementById('clientTelephone').value,
+                isRegularClient: document.getElementById('isRegularClient').value
+            };
+
+            if (id) {
+                client.id = id;
+                await updateClient(client);
+            } else {
+                await createClient(client);
+            }
+
+            hideForm();
+        });
+
+        function showCreateForm() {
+            document.getElementById('clientForm').style.display = 'block';
+            document.getElementById('formTitle').innerText = 'Добавить клиента';
+        }
+
+        function showUpdateForm(id) {
+            const client = clients.find(c => c.id === id);
+            if (!client) return;
+            document.getElementById('clientForm').style.display = 'block';
+            document.getElementById('formTitle').innerText = 'Редактировать клиента';
+            document.getElementById('clientId').value = client.id;
+            document.getElementById('clientName').value = client.name;
+            document.getElementById('clientMiddleName').value = client.middleName;
+            document.getElementById('clientSurname').value = client.surname;
+            document.getElementById('clientTelephone').value = client.telephone;
+            document.getElementById('isRegularClient').value = client.isRegularClient;
+        }
+
+        function hideForm() {
+            document.getElementById('clientForm').style.display = 'none';
+            document.getElementById('clientFormFields').reset();
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            getClients();
+        });
+    </script>
+</body>
+</html>

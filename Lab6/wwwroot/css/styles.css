@@ -1,0 +1,100 @@
+﻿/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Общие стили для навигации */
+.navbar {
+    background-color: #2c3e50; /* Темный фон */
+    padding: 10px 20px; /* Отступы вокруг содержимого */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для выделения */
+}
+
+/* Стили для списка меню */
+.navbar-menu {
+    list-style: none; /* Убираем маркеры списка */
+    margin: 0; /* Убираем внешние отступы */
+    padding: 0; /* Убираем внутренние отступы */
+    display: flex; /* Делаем элементы в строку */
+    justify-content: space-around; /* Равномерно распределяем элементы */
+}
+
+    .navbar-menu li {
+        margin: 0 10px; /* Добавляем отступы между элементами */
+    }
+
+    .navbar-menu a {
+        text-decoration: none; /* Убираем подчеркивание */
+        color: #ecf0f1; /* Светлый цвет текста */
+        font-weight: bold; /* Жирный текст */
+        padding: 8px 12px;
+        border-radius: 4px; 
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+        .navbar-menu a:hover {
+            background-color: #3498db; 
+            color: #fff; 
+        }
+
+        .navbar-menu a:active {
+            background-color: #2980b9; 
+        }
+
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+    table th, table td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
+
+    table th {
+        background-color: #333;
+        color: white;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    table tr:hover {
+        background-color: #f1f1f1;
+    }
+
+button {
+    padding: 8px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+   background-color: #575757;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
