@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Kursach.Domain.Entities.Car">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAgEAAAAAAAAAAAAAAAAAAAAABABQ=</HashCode>
+      <FileName>Entities\Car.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kursach.Domain.Entities.Client">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAACAAAAAAAAAAAQAAwABAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Entities\Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kursach.Domain.Entities.Discount">
+    <Position X="19.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAABgAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Discount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kursach.Domain.Entities.Employee">
+    <Position X="21.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAABAAQAAQABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kursach.Domain.Entities.EmployeeWorkSummary">
+    <Position X="18" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAACAAAAAAAAAAAQAAAAAAAAAAAAAACAAACAAA=</HashCode>
+      <FileName>Entities\EmployeeWorkSummary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kursach.Domain.Entities.ParkingSpace">
+    <Position X="18" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAARAAAAAAAAAAAKAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\ParkingSpace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kursach.Domain.Entities.Payment">
+    <Position X="19.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACQAAAAAEAAIIAAAAAQACACAgAAAAAAkAAAAAAAAA=</HashCode>
+      <FileName>Entities\Payment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kursach.Domain.Entities.Tariff">
+    <Position X="21.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAACAAAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Tariff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kursach.Domain.Entities.User">
+    <Position X="16.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACCAAAAAAAAAAAAESAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kursach.Domain.Entities.WorkShift">
+    <Position X="14.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAgAEAAAAAAAAAAAAQAAACAACAAAABAAAAAACAAA=</HashCode>
+      <FileName>Entities\WorkShift.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kursach.Domain.Entities.WorkShiftPayment">
+    <Position X="21.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAACAAAAIAAAAEAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\WorkShiftPayment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Kursach.Domain.Abstractions.ICarRepository" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAEBAAABAAAAAAAEAAEAAAAAAAAAAAIA=</HashCode>
+      <FileName>Abstractions\ICarRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Kursach.Domain.Abstractions.IClientRepository" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAEBAAABAAAAAAAEAAEAAAAAAAAAAAIA=</HashCode>
+      <FileName>Abstractions\IClientRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Kursach.Domain.Abstractions.IDiscountRepository" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAEBAAABAAAAAAAEAAEAAAAAAAAAAAIA=</HashCode>
+      <FileName>Abstractions\IDiscountRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Kursach.Domain.Abstractions.IEmployeeRepository" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAgAAAAAEBAAAAAAAAAAAEAAEAAAAAAAAAAAIA=</HashCode>
+      <FileName>Abstractions\IEmployeeRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Kursach.Domain.Abstractions.IParkingSpaceRepository" Collapsed="true">
+    <Position X="7" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAEBAAABAAAAAAAEAAEAAAAAAAAAAAIA=</HashCode>
+      <FileName>Abstractions\IParkingSpaceRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Kursach.Domain.Abstractions.IPaymentRepository" Collapsed="true">
+    <Position X="8.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAEBAAABAAAAAAAEAAEAAAAAAAAAAAIA=</HashCode>
+      <FileName>Abstractions\IPaymentRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Kursach.Domain.Abstractions.ITariffRepository" Collapsed="true">
+    <Position X="10.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAEBAAABAAAAAAAEAAEAAAAAAAAAAAIA=</HashCode>
+      <FileName>Abstractions\ITariffRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Kursach.Domain.Abstractions.IUserRepository" Collapsed="true">
+    <Position X="12.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAEBAAABAAAACAAEAAEAAAAAAAAAAAIA=</HashCode>
+      <FileName>Abstractions\IUserRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Kursach.Domain.Abstractions.IWorkShiftPaymentRepository" Collapsed="true">
+    <Position X="7" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAEBAAABAAAAAAAEAAEAAAAAAAAAAAIA=</HashCode>
+      <FileName>Abstractions\IWorkShiftPaymentRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Kursach.Domain.Abstractions.IWorkShiftRepository" Collapsed="true">
+    <Position X="8.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAEBAAABAAAAAAAEAAEAAAAAAAAAAAIA=</HashCode>
+      <FileName>Abstractions\IWorkShiftRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

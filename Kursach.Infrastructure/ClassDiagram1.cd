@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Kursach.Infrastructure.AppDbContext" Collapsed="true">
+    <Position X="12" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACACAQBQAAAABCAAQAAIGAAAAAAAAgAAAAAAABA=</HashCode>
+      <FileName>AppDbContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kursach.Infrastructure.Repositories.CarRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAAAAAEBAAABAAAAAAAEAAEAAAAAAAAAAAIA=</HashCode>
+      <FileName>Repositories\CarRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Kursach.Infrastructure.Repositories.ClientRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAAAAAEBAAABAAAAAAAEAAEAAAAAAAAAAAIA=</HashCode>
+      <FileName>Repositories\ClientRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Kursach.Infrastructure.Repositories.DiscountRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAAAAAEBAAABAAAAAAAEAAEAAAAAAAAAAAIA=</HashCode>
+      <FileName>Repositories\DiscountRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Kursach.Infrastructure.Repositories.EmployeeRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAgAAAAAEBAAAAAAAAAAAEAAEAAAAAAAAAAAIA=</HashCode>
+      <FileName>Repositories\EmployeeRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Kursach.Infrastructure.Repositories.ParkingSpaceRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAAAAAEBAAABAAAAAAAEAAEAAAAAAAAAAAIA=</HashCode>
+      <FileName>Repositories\ParkingSpaceRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Kursach.Infrastructure.Repositories.PaymentRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAAAAAEBAAABAAAAAAAEAAEAAAAAAAAAAAIA=</HashCode>
+      <FileName>Repositories\PaymentRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Kursach.Infrastructure.Repositories.TariffRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAAAAAEBAAABAAAAAAAEAAEAAAAAAAAAAAIA=</HashCode>
+      <FileName>Repositories\TariffRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Kursach.Infrastructure.Repositories.UserRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAAAAAEBAAABAAAACAAEAAEAAAAAAAAAAAIA=</HashCode>
+      <FileName>Repositories\UserRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Kursach.Infrastructure.Repositories.WorkShiftPaymentRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAAAAAEBAAABAAAAAAAEAAEAAAAAAAAAAAIA=</HashCode>
+      <FileName>Repositories\WorkShiftPaymentRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Kursach.Infrastructure.Repositories.WorkShiftRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAAAAAEBAAABAAAAAAAEAAEAAAAAAAAAAAIA=</HashCode>
+      <FileName>Repositories\WorkShiftRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
